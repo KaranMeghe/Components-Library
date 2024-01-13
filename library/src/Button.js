@@ -10,7 +10,7 @@ const Button = ({
   outline,
   rounded,
 }) => {
-  return <button>{children}</button>;
+  return <button className=" bg-green-400 p-5 my-5">{children}</button>;
 };
 
 Button.propTypes = {
@@ -45,3 +45,7 @@ Button.propTypes = {
 };
 
 export default Button;
+
+// npm install -D tailwindcss postcss autoprefixer
+
+// npx tailwindcss init -p
