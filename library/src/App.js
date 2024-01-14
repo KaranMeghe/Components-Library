@@ -32,6 +32,10 @@ const App = () => {
           Danger
         </Button>
       </div>
+
+      <div>
+        <Button rounded>Rounded</Button>
+      </div>
     </div>
   );
 };
