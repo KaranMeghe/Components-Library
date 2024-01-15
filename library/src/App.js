@@ -1,14 +1,30 @@
 import Button from "./Button";
 
 const App = () => {
+  const handleClick = () => {
+    console.log("Collecting Rest");
+  };
+  const handleMouseOverIn = () => {
+    console.log("in");
+  };
+  const handleMouseOverOut = () => {
+    console.log("out");
+  };
   return (
     <div>
       <div>
-        <Button primary>Primary</Button>
+        <Button primary onClick={handleClick}>
+          Primary
+        </Button>
       </div>
 
       <div>
-        <Button secondary rounded>
+        <Button
+          secondary
+          rounded
+          onMouseOver={handleMouseOverIn}
+          onMouseLeave={handleMouseOverOut}
+        >
           Secondary
         </Button>
       </div>

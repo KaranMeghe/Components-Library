@@ -11,6 +11,7 @@ const Button = ({
   danger,
   outline,
   rounded,
+  ...rest
 }) => {
   //   let baseClassName = "px-3 py-1.5 border m-2";
   //   if (primary) {
@@ -67,7 +68,11 @@ const Button = ({
 
   classes = twMerge(classes);
 
-  return <button className={classes}>{children}</button>;
+  return (
+    <button {...rest} className={classes}>
+      {children}
+    </button>
+  );
 };
 
 Button.propTypes = {
