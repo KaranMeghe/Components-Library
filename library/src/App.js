@@ -4,9 +4,7 @@ const App = () => {
   return (
     <div>
       <div>
-        <Button primary outline>
-          Primary
-        </Button>
+        <Button primary>Primary</Button>
       </div>
 
       <div>
@@ -31,10 +29,6 @@ const App = () => {
         <Button danger outline rounded>
           Danger
         </Button>
-      </div>
-
-      <div>
-        <Button rounded>Rounded</Button>
       </div>
     </div>
   );
