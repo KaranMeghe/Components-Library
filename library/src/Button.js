@@ -13,44 +13,6 @@ const Button = ({
   rounded,
   ...rest
 }) => {
-  //   let baseClassName = "px-3 py-1.5 border m-2";
-  //   if (primary) {
-  //     baseClassName += " bg-blue-500 border-blue-600 text-white";
-  //   } else if (secondary) {
-  //     baseClassName += " bg-gray-500 border-gray-600 text-white";
-  //   } else if (success) {
-  //     baseClassName += " bg-green-500 border-green-600 text-white";
-  //   } else if (warning) {
-  //     baseClassName += " bg-orange-500 border-orange-600 text-white";
-  //   } else if (danger) {
-  //     baseClassName += " bg-red-500 border-red-600 text-white";
-  //   } else if (rounded) {
-  //     baseClassName += " rounded-full";
-  //   }
-
-  //   switch (true) {
-  //     case primary:
-  //       baseClassName += " bg-blue-500 border-blue-600 text-white";
-  //       break;
-  //     case secondary:
-  //       baseClassName += " bg-gray-500 border-gray-600 text-white";
-  //       break;
-  //     case success:
-  //       baseClassName += " bg-green-500 border-green-600 text-white";
-  //       break;
-  //     case warning:
-  //       baseClassName += " bg-orange-500 border-orange-600 text-white";
-  //       break;
-  //     case danger:
-  //       baseClassName += " bg-red-500 border-red-600 text-white";
-  //       break;
-  //     case rounded:
-  //       baseClassName += " rounded-full";
-  //       break;
-  //     default:
-  //       break;
-  //   }
-
   let classes = classNames("flex items-center m-3 px-3 py-1.5 border", {
     "border-blue-500 bg-blue-500 text-white": primary,
     "border-gray-900 bg-gray-900 text-white": secondary,
