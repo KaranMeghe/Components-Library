@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaChevronCircleDown } from "react-icons/fa";
+import Panel from "./Panel";
 const Dropdown = ({ options, value, onChange }) => {
   const [isExpand, setIsExpand] = useState(false);
 
@@ -26,7 +27,7 @@ const Dropdown = ({ options, value, onChange }) => {
 
   return (
     <div className="w-32 relative cursor-pointer m-2">
-      <div
+      <Panel
         className="flex justify-between items-center border"
         onClick={handleClick}
       >
@@ -34,12 +35,8 @@ const Dropdown = ({ options, value, onChange }) => {
         <div>
           <FaChevronCircleDown />
         </div>
-      </div>
-      {isExpand && (
-        <div className="absolute top-full border rounded p-3 shadow bg-white w-full">
-          {renderedItems}
-        </div>
-      )}
+      </Panel>
+      {isExpand && <Panel className="absolute top-full">{renderedItems}</Panel>}
     </div>
   );
 };
