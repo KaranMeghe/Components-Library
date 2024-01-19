@@ -1,13 +1,7 @@
-import Dropdown from "./Components/Dropdown";
+import DropdownListPage from "./Pages/DropdownListPage";
 
 const App = () => {
-  const options = [
-    { label: "Red", value: "red" },
-    { label: "Green", value: "green" },
-    { label: "Yellow", value: "yellow" },
-    { label: "Blue", value: "blue" },
-  ];
-  return <Dropdown options={options} />;
+  return <DropdownListPage />;
 };
 
 export default App;

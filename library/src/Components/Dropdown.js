@@ -1,16 +1,15 @@
 import { useState } from "react";
 import { FaChevronCircleDown } from "react-icons/fa";
-const Dropdown = ({ options }) => {
+const Dropdown = ({ options, value, onChange }) => {
   const [isExpand, setIsExpand] = useState(false);
-  const [option, setOption] = useState("Select...");
 
   const handleClick = () => {
     setIsExpand(!isExpand);
   };
 
-  const handleOptionClick = (item) => {
+  const handleOptionClick = (option) => {
     setIsExpand(false);
-    setOption(item.label);
+    onChange(option);
   };
 
   const renderedItems = options.map((item) => {
@@ -24,7 +23,7 @@ const Dropdown = ({ options }) => {
   return (
     <div className="w-32 cursor-pointer">
       <div className="flex justify-between items-center" onClick={handleClick}>
-        <div>{option}</div>
+        <div>{value?.label || "Select...."}</div>
         <div>
           <FaChevronCircleDown />
         </div>
