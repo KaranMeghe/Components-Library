@@ -2,10 +2,10 @@ import Dropdown from "./Components/Dropdown";
 
 const App = () => {
   const options = [
-    { label: "red", value: "red" },
-    { label: "green", value: "green" },
-    { label: "yellow", value: "yellow" },
-    { label: "blue", value: "blue" },
+    { label: "Red", value: "red" },
+    { label: "Green", value: "green" },
+    { label: "Yellow", value: "yellow" },
+    { label: "Blue", value: "blue" },
   ];
   return <Dropdown options={options} />;
 };
