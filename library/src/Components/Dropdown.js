@@ -1,8 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FaChevronCircleDown } from "react-icons/fa";
 import Panel from "./Panel";
 const Dropdown = ({ options, value, onChange }) => {
   const [isExpand, setIsExpand] = useState(false);
+  const divEl = useRef();
+  useEffect(() => {
+    const handler = (event) => {
+      if (!divEl.current.contains(event.target)) {
+        setIsExpand(false);
+      }
+    };
+    document.addEventListener("click", handler, true);
+
+    return () => {
+      document.removeEventListener("click", handler);
+    };
+  }, []);
 
   const handleClick = () => {
     setIsExpand(!isExpand);
@@ -26,7 +39,7 @@ const Dropdown = ({ options, value, onChange }) => {
   });
 
   return (
-    <div className="w-32 relative cursor-pointer m-2">
+    <div ref={divEl} className="w-32 relative cursor-pointer m-2">
       <Panel
         className="flex justify-between items-center border"
         onClick={handleClick}

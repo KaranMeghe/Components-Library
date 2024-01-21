@@ -1,7 +1,11 @@
 import DropdownListPage from "./Pages/DropdownListPage";
 
 const App = () => {
-  return <DropdownListPage />;
+  return (
+    <div className="flex">
+      <DropdownListPage /> <DropdownListPage />
+    </div>
+  );
 };
 
 export default App;
